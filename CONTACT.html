@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Me</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<style>
+    #date-time {
+    margin: 20px auto; /* Center and add spacing */
+    font-size: 24px; /* Adjust font size for readability */
+    font-weight: bold; /* Make the text stand out */
+    text-align: center; /* Center-align the text */
+    padding: 15px 20px; /* Add some padding around the text */
+    border: 3px solid #8b0c4c; /* Light blue border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #efe6e9; /* Light background color */
+    color: #b30960; /* Darker text for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    display: inline-block; 
+}
+
+</style>
+<script>
+    function revealPhone() {
+        document.getElementById('phone-number').textContent = '+60194649092';
+    }
+</script>
+<body>
+    <center>
+        <p><button onclick="document.location='index.html'">Home</button></p>
+    </center>
+    <center>
+        <p id="date-time">Loading...</p>
+        <script>
+            function updateDateTime() {
+                const now = new Date(); 
+                const options = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: true // Use 12-hour format, set to false for 24-hour format
+                };
+        
+                // Format the date and time
+                const formattedDateTime = now.toLocaleString('en-US', options);
+        
+                // Display the date and time
+                document.getElementById('date-time').innerText = formattedDateTime;
+            }
+        
+            // Update the date and time every second
+            setInterval(updateDateTime, 1000);
+        
+            // Call the function initially
+            updateDateTime();
+        </script>
+    </center>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <a href="mailto:Najwaalya5zal@gmail.com">📧 Najwaalya5zal@gmail.com</a>
+        <p>📞 Phone: <span id="phone-number">Private</span> <button onclick="revealPhone()">Show</button></p>
+        <h2>Active Social Media Accounts:</h2>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/najwalya._/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo">
+            </a>
+            <a href="https://x.com/najwalyaa" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/X_icon_2.svg" alt="X Logo">
+            </a>
+            <a href="https://www.tiktok.com/@4lyadrafts" target="_blank">
+                <img src="tt.png" alt="TikTok Logo">
+            </a>
+            
+        </div>
+    </div>
+
+</body>
+</html>
